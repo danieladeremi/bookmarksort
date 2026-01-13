@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Sorter (by Website)",
+  "version": "1.0.0",
+  "description": "Groups and sorts bookmarks by website/domain into a new folder.",
+  "permissions": ["bookmarks"],
+  "action": {
+    "default_title": "Sort Bookmarks",
+    "default_popup": "popup.html"
+  }
+}
