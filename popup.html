@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bookmark Sorter</title>
+    <style>
+      body { font-family: system-ui, Arial; width: 360px; padding: 12px; }
+      button { width: 100%; padding: 10px; margin: 6px 0; cursor: pointer; }
+      .row { display: flex; gap: 8px; align-items: center; }
+      .row label { font-size: 13px; }
+      .small { font-size: 12px; opacity: 0.85; }
+      pre { white-space: pre-wrap; background: #f6f6f6; padding: 10px; border-radius: 8px; max-height: 260px; overflow: auto; }
+      .status { margin-top: 8px; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <h3 style="margin:0 0 8px 0;">Bookmark Sorter</h3>
+
+    <div class="row">
+      <input type="checkbox" id="mergeSubdomains" checked />
+      <label for="mergeSubdomains">Merge subdomains (docs.google.com → google.com)</label>
+    </div>
+
+    <div class="row">
+      <input type="checkbox" id="includeFolderPath" checked />
+      <label for="includeFolderPath">Include original folder path in preview</label>
+    </div>
+
+    <button id="previewBtn">Preview grouping</button>
+    <button id="applyBtn">Apply (creates “Sorted by Website” folder)</button>
+
+    <div class="status" id="status"></div>
+    <pre id="output" aria-label="preview output"></pre>
+
+    <p class="small">
+      Tip: This creates a new organized folder so your current bookmarks stay untouched.
+    </p>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
